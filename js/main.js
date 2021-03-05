@@ -32,21 +32,21 @@ const howIstheday = async () => {
             const proxy = 'https://cors-anywhere.herokuapp.com/';
             const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat}, ${long}`;
             */
-         /* 
-            const api = `https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat}, ${long}`;
-           await fetch(api)
-                .then(response => {
-                    return response.json();
-                })
-                .then(data => {
-                 //   const { temperature, summary, icon } = data.currently;
-                   console.log(data);
-                });
+/* 
+   const api = `https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat}, ${long}`;
+  await fetch(api)
+       .then(response => {
+           return response.json();
+       })
+       .then(data => {
+        //   const { temperature, summary, icon } = data.currently;
+          console.log(data);
+       });
 console.log(data.id);
 }
 */
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
     let long;
     let lat;
     let temperatureDescription = document.querySelector('.temperature-description');
@@ -59,24 +59,24 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition(position => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
+            let apiKey = '47f77602bceb60c3cccc4a9191dbab9a';
 
-            const proxy = 'https://cors-anywhere.herokuapp.com/';
-            const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat}, ${long}`;
-
+            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
             fetch(api)
                 .then(response => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data);
-                    /*const { temperature, summary, icon } = data.currently;
+                    console.log(data.name); // Return your CITY NAME
+                   
                     //Set DOM Elements from API
+                    /*
                     temperatureDegree.textContent = temperature;
                     temperatureDescription.textContent = summary;
                     locationTimezone.textContent = data.timezone;
                    */
                     //Set Icon
-                    setIcons(icon, document.querySelector('.icon'));
+                    //setIcons(icon, document.querySelector('.icon'));
 
                     //Formula for Celsius
                     let celsius = (temperature - 32) * (5 / 9);

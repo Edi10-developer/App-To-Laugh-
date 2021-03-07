@@ -1,7 +1,7 @@
 // API JOKES
 const URL = 'https://icanhazdadjoke.com/';
 
-// Jokes Main Function
+// Main Function
 const generateJoke = async () => {
     let response = await fetch(URL, {
         method: 'GET',
@@ -12,13 +12,12 @@ const generateJoke = async () => {
     let data = await response.json()
     let joke = data.joke;
 
-    document.querySelector('.joke-div').innerHTML = `<h2>"${joke}"</h2>`;
+    document.querySelector('.joke-div').innerHTML = `<h2>${joke}</h2>`;
     console.log(joke);
 }
 
 
 // API WHEATHER
-// Wheather Main Function
 window.addEventListener('load', async () => {
     let long;
     let lat;
@@ -47,14 +46,38 @@ window.addEventListener('load', async () => {
                  let weatherTitle = data.weather[0].main;
                  let weatherDescription = data.weather[0].description;
                  let windSpeed = data.wind.speed;
-                 console.log(city);// Return your CITY 
-                 
-                 document.getElementById('city').innerText = `${city}, `;
-                 document.getElementById('weatherTitle').innerText = `${weatherTitle}, `;
-                 document.getElementById('weatherDescription').innerText = weatherDescription;
-            })
-        });
-    };
-});
-            
-     
+                 console.log(city);// Return your CITY NAME
+
+                 //Set DOM Elements from API
+                 /*
+                 temperatureDegree.textContent = temperature;
+                 temperatureDescription.textContent = summary;
+                 locationTimezone.textContent = data.timezone;
+                */
+                //Set Icon
+                //setIcons(icon, document.querySelector('.icon'));
+
+                //Formula for Celsius
+                // let celsius = (temperature - 32) * (5 / 9);
+
+              /*  //Change temperature to C / F
+                  temperatureSection.addEventListener('click', () => {
+                      if (temperatureSpan.textContent === "F") {
+                          temperatureSpan.textContent = "C";
+                          temperatureDegree.textContent = Math.floor(celsius);
+                      } else {
+                          temperatureSpan.textContent = "F";
+                          temperatureDegree.textContent = temperature;
+                      }
+                  });  */
+
+            });
+
+
+        function setIcons(icon, iconId) {
+            const skycons = new Skycons({ color: "white" });
+            currentIcon = icon.replace(/-/g, "_").toUpperCase();
+            skycons.play();
+            return skycons.set(iconId, Skycons[currentIcon]);
+        };
+    }

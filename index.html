@@ -9,10 +9,18 @@
 </head>
 <body>
     <h1>Laughing APP</h1>
+    <div class="weather">
+        <h3 id="city"></h3>
+        <h3 id="weatherTitle"></h3>
+        <h3 id="weatherDescription"></h3>
+    </div>
 <div class="container">
-    <button type="button" onclick="generateJoke();" class="btn">Next Joke</button> 
+    <div class="joke-container">
+    <h2>Ready to laugh?<span id="emojy">&#129315;</span></h2>
     <div class="joke-div">
     </div>
+    <button type="button" onclick="generateJoke();" class="btn">Next Joke</button> 
+</div>
 </div>
 <footer>
     <h3>Developed by <a id="developer" href="https://ediselimi.com"><em>Edi Selimi</em></a> &copy; 2021</h3>

@@ -2,7 +2,7 @@
 
 > This is a simple LaughingAPP.
 Once you open the App you will be asked to give consent to access to your location.
-Once given, the climatic conditions of his city will be shown and a button to load the jokes.
+Once given, the climatic conditions of your city will be shown and a button to load the jokes.
 It consumes 3 APIs.
 
 

@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laughing APP</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <h1>Laughing APP</h1>
+
     <div class="weather">
         <h3 id="city"></h3>
         <h3 id="weatherTitle"></h3>
         <h3 id="weatherDescription"></h3>
     </div>
-<div class="container">
-    <div class="joke-container">
-    <h2>Ready to laugh?<span id="emojy">&#129315;</span></h2>
-    <div class="joke-div">
+
+    <div class="container">
+        <div class="joke-container">
+            <h2>Ready to laugh?<span id="emojy">&#129315;</span></h2>
+            <div class="joke-div">
+            </div>
+            <button type="button" onclick="generateJoke();" class="btn">Next Joke</button>
+        </div>
     </div>
-    <button type="button" onclick="generateJoke();" class="btn">Next Joke</button> 
-</div>
-</div>
-<footer>
-    <h3>Developed by <a id="developer" href="https://ediselimi.com"><em>Edi Selimi</em></a> &copy; 2021</h3>
-</footer>
+    
+    <footer>
+        <h3>Developed by <a id="developer" href="https://ediselimi.com"><em>Edi Selimi</em></a> &copy; 2021</h3>
+    </footer>
+
+    <!--JavaScript-->
     <script src="js/main.js"></script>
 </body>
+
 </html>

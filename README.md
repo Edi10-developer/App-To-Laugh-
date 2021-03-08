@@ -33,11 +33,11 @@ Open index.html with your browser
 ## APIs
 
 **Weather**
-[Open Weather Map](https://openweathermap.org/)
+-[Open Weather Map](https://openweathermap.org/)
 
 **Jokes**
-[Icndb](http://www.icndb.com/)
-[Icanhazdadjoke](https://icanhazdadjoke.com/)
+-[Icndb](http://www.icndb.com/)
+-[Icanhazdadjoke](https://icanhazdadjoke.com/)
 
 
 ## Author

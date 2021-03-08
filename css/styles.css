@@ -9,26 +9,19 @@
     src: url(./fonts/Cuprum/static/Cuprum-Medium.ttf);
 }
 
+/* Typography
+******************/
 body {
   text-align: center;
-  background-color: rgb(253, 255, 142);
+  background-color: rgb(203, 245, 255);
+  overflow: hidden;
 }
 
 h1{
     display: block;
     font-family: Righteous;
     letter-spacing: 1px;
-    padding: 1rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  background-image: url(../img/background.jpg);
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-  padding: 3rem;
+    color: white;
 }
 
 .btn {
@@ -37,6 +30,7 @@ h1{
   align-items: center;
   width: 12rem;
   height: 3rem;
+  margin-bottom: 1rem;
   background-color: #3ED3DE;
   color: white;
   font-size: 15px;
@@ -53,57 +47,14 @@ h1{
   background-color: #183af5;
 }
 
-.joke-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(231, 245, 226, .94);
-  color: rgb(7, 7, 7);
-  min-width: 50%;
-  border: 1px solid #ccc;
-  min-height: 25rem;
-  margin: 3rem auto;
-  padding: 1rem;
-  font-family: Ciprum;
-  letter-spacing: 0.6px;
-  border-radius: 7px;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
-}
-
-.joke-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
-  padding: 1rem;
-  font-family: Ciprum;
-  letter-spacing: 0.6px;
-}
-
-footer{
-    font-family:Righteous;
-    padding-top: 1.5rem;
-}
-
-footer a{
-    color: rgb(255, 116, 23);
-    text-decoration: none;
-}
-
-
-/****** new page   ******************/
+/* Weather
+**************/
 .weather{
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Righteous;
-  border: 1px solid red;
-  background-color: white;
-  width: 60%;
-  height: 4rem;
+  height: 2rem;
   margin: 0 auto;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -119,4 +70,85 @@ footer a{
 
 #emojy{
   font-size: 30px;
+}
+
+/* Jokes
+**************/
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-image: url(../img/background.jpg);
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  padding: 1rem 3rem 1rem 2rem;
+  margin: -1rem;
+  height: 25rem;
+}
+
+.joke-container{
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(231, 245, 226, .94);
+  color: rgb(7, 7, 7);
+  min-width: 70%;
+  border: 1px solid #ccc;
+  min-height: 20rem;
+  margin: 3rem auto;
+  padding: 1rem;
+  font-family: Ciprum;
+  letter-spacing: 0.6px;
+  border-radius: 7px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.joke-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  font-family: Ciprum;
+  letter-spacing: 0.6px;
+}
+
+/* Footer
+*************/
+footer{
+    font-family:Righteous;
+    line-height: 6rem;
+}
+
+footer a{
+    color: blue;
+    text-decoration: none;
+}
+
+
+/* Mobile view
+******************/
+@media (max-width: 500px){
+  .container{
+    min-height: 22rem;
+    padding: 1.7rem;
+  }
+  .joke-container{
+    min-height: 20rem;
+    padding: .7rem;
+  }
+  .joke-div{
+    margin: 1rem auto;
+    font-size: 12px;
+  }
+  footer{
+    padding: 1rem;
+    line-height: 1.5rem;
+  }
 }
